@@ -1,0 +1,16 @@
+site_name: MongoDB Guide
+theme: 'material'
+pages: 
+  - 'Introduction': 'index.md'
+  - 'CRUD Operations': 
+    - 'Create': crud/create.md
+    - 'Read': crud/read.md
+    - 'Update': crud/update.md
+    - 'Delete': crud/delete.md
+markdown_extensions:
+  - admonition
+  - codehilite
+extra:
+  palette:
+    primary: 'light green'
+    accent: 'indigo'
