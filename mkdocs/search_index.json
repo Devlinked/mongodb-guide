@@ -1,64 +1,174 @@
 {
     "docs": [
         {
-            "location": "/", 
-            "text": "MongoDB Guide Intro\n\n\nThis documentation have the objetive \n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\n\n\nNote\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod\nnulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor\nmassa, nec semper lorem quam in massa.\n\n\n\n\nimport\n \ntensorflow\n \nas\n \ntf\n\n\n\n\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "location": "/",
+            "text": "MongoDB Guide\n\u00b6\n\n\nThis documentation has the objective to gather useful information about MongoDB that we have learnt with development and production experience, research and notes taken from \nMongoDB University\n courses.",
             "title": "Introduction"
-        }, 
+        },
         {
-            "location": "/#mongodb-guide-intro", 
-            "text": "This documentation have the objetive", 
-            "title": "MongoDB Guide Intro"
-        }, 
+            "location": "/#mongodb-guide",
+            "text": "This documentation has the objective to gather useful information about MongoDB that we have learnt with development and production experience, research and notes taken from  MongoDB University  courses.",
+            "title": "MongoDB Guide"
+        },
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
-        }, 
-        {
-            "location": "/#project-layout", 
-            "text": "Note  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod\nnulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor\nmassa, nec semper lorem quam in massa.   import   tensorflow   as   tf   mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
-        }, 
-        {
-            "location": "/crud/create/", 
-            "text": "Create\n\n\nThis documentation have the objetive", 
+            "location": "/crud/create/",
+            "text": "Create\n\u00b6\n\n\ndb.collection.insertOne\n\u00b6\n\n\nInsert a single document into a collection.\n\n\ndb\n.\nmovies\n.\ninsertOne\n({\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n});\n\n\n\n\n\n\ndb.collection.insertMany\n\u00b6\n\n\nInsert multiple documents into a collection.\n\n\ndb\n.\nmovies\n.\ninsertMany\n(\n\n  \n[\n\n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n},\n \n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Scarface\"\n,\n \n\"year\"\n:\n \n1983\n \n},\n \n// have the same id that Deadpool\n\n    \n{\n \n\"_id\"\n:\n \n2\n,\n \n\"title\"\n:\n \n\"Avatar\"\n,\n \n\"year\"\n:\n \n2009\n \n},\n\n  \n]\n\n\n);\n\n\n\n\n\n\nBy default, \ninsertMany\n insert all the documents with the parameter \nordered\n set to true,\nthis means that mongo will insert all the documents one by one from top to bottom but\nif in the middle of the operation mongo finds an error with at least one document, the process will stop.\n\n\ndb\n.\nmovies\n.\ninsertMany\n(\n\n  \n[\n\n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n},\n \n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Scarface\"\n,\n \n\"year\"\n:\n \n1983\n \n},\n \n// have the same id that Deadpool\n\n    \n{\n \n\"_id\"\n:\n \n2\n,\n \n\"title\"\n:\n \n\"Avatar\"\n,\n \n\"year\"\n:\n \n2009\n \n},\n\n  \n]\n\n\n);\n\n\n\n\n\n\nUsing the parameter \nordered\n with \nfalse\n as value, mongo will skip the error (if exist) and\nwill insert successfuly all the documents that have no errors.\n\n\ndb\n.\nmovies\n.\ninsertMany\n(\n\n  \n[\n\n    \n{\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n},\n \n    \n{\n \n\"title\"\n:\n \n\"Scarface\"\n,\n \n\"year\"\n:\n \n1983\n \n}\n\n  \n],\n\n  \n{\n \n\"ordered\"\n:\n \nfalse\n \n}\n\n\n);\n\n\n\n\n\n\ndb.collection.insert\n\u00b6\n\n\ndb\n.\nmovies\n.\ninsert\n({\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n});",
             "title": "Create"
-        }, 
+        },
         {
-            "location": "/crud/create/#create", 
-            "text": "This documentation have the objetive", 
+            "location": "/crud/create/#create",
+            "text": "",
             "title": "Create"
-        }, 
+        },
         {
-            "location": "/crud/read/", 
-            "text": "Read\n\n\nThis documentation have the objetive", 
+            "location": "/crud/create/#dbcollectioninsertone",
+            "text": "Insert a single document into a collection.  db . movies . insertOne ({   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   });",
+            "title": "db.collection.insertOne"
+        },
+        {
+            "location": "/crud/create/#dbcollectioninsertmany",
+            "text": "Insert multiple documents into a collection.  db . movies . insertMany ( \n   [ \n     {   \"_id\" :   1 ,   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   },  \n     {   \"_id\" :   1 ,   \"title\" :   \"Scarface\" ,   \"year\" :   1983   },   // have the same id that Deadpool \n     {   \"_id\" :   2 ,   \"title\" :   \"Avatar\" ,   \"year\" :   2009   }, \n   ]  );   By default,  insertMany  insert all the documents with the parameter  ordered  set to true,\nthis means that mongo will insert all the documents one by one from top to bottom but\nif in the middle of the operation mongo finds an error with at least one document, the process will stop.  db . movies . insertMany ( \n   [ \n     {   \"_id\" :   1 ,   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   },  \n     {   \"_id\" :   1 ,   \"title\" :   \"Scarface\" ,   \"year\" :   1983   },   // have the same id that Deadpool \n     {   \"_id\" :   2 ,   \"title\" :   \"Avatar\" ,   \"year\" :   2009   }, \n   ]  );   Using the parameter  ordered  with  false  as value, mongo will skip the error (if exist) and\nwill insert successfuly all the documents that have no errors.  db . movies . insertMany ( \n   [ \n     {   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   },  \n     {   \"title\" :   \"Scarface\" ,   \"year\" :   1983   } \n   ], \n   {   \"ordered\" :   false   }  );",
+            "title": "db.collection.insertMany"
+        },
+        {
+            "location": "/crud/create/#dbcollectioninsert",
+            "text": "db . movies . insert ({   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   });",
+            "title": "db.collection.insert"
+        },
+        {
+            "location": "/crud/read/",
+            "text": "Read\n\u00b6\n\n\nThis documentation have the objetive",
             "title": "Read"
-        }, 
+        },
         {
-            "location": "/crud/read/#read", 
-            "text": "This documentation have the objetive", 
+            "location": "/crud/read/#read",
+            "text": "This documentation have the objetive",
             "title": "Read"
-        }, 
+        },
         {
-            "location": "/crud/update/", 
-            "text": "Update\n\n\nThis documentation have the objetive", 
+            "location": "/crud/update/",
+            "text": "Update\n\u00b6\n\n\nThis documentation have the objetive",
             "title": "Update"
-        }, 
+        },
         {
-            "location": "/crud/update/#update", 
-            "text": "This documentation have the objetive", 
+            "location": "/crud/update/#update",
+            "text": "This documentation have the objetive",
             "title": "Update"
-        }, 
+        },
         {
-            "location": "/crud/delete/", 
-            "text": "Delete\n\n\nThis documentation have the objetive", 
+            "location": "/crud/delete/",
+            "text": "Delete\n\u00b6\n\n\nThis documentation have the objetive",
             "title": "Delete"
-        }, 
+        },
         {
-            "location": "/crud/delete/#delete", 
-            "text": "This documentation have the objetive", 
+            "location": "/crud/delete/#delete",
+            "text": "This documentation have the objetive",
             "title": "Delete"
+        },
+        {
+            "location": "/development/drivers/",
+            "text": "MongoDB drivers\n\u00b6\n\n\nNode.js\n\u00b6\n\n\nPython\n\u00b6",
+            "title": "Drivers"
+        },
+        {
+            "location": "/development/drivers/#mongodb-drivers",
+            "text": "",
+            "title": "MongoDB drivers"
+        },
+        {
+            "location": "/development/drivers/#nodejs",
+            "text": "",
+            "title": "Node.js"
+        },
+        {
+            "location": "/development/drivers/#python",
+            "text": "",
+            "title": "Python"
+        },
+        {
+            "location": "/development/schema_design/",
+            "text": "",
+            "title": "Schema design"
+        },
+        {
+            "location": "/management_actions/configuration/",
+            "text": "Configuration\n\u00b6\n\n\nShutdown a mongod instance\n\u00b6\n\n\nMongo Shell\n\u00b6\n\n\nuse\n \nadmin\n\n\ndb\n.\nshutdownServer\n();\n\n\n\n\n\n\nCommand line\n\u00b6\n\n\nmongod --shutdown\n\n\n\n\n\nUsing configuration files\n\u00b6",
+            "title": "Configuration"
+        },
+        {
+            "location": "/management_actions/configuration/#configuration",
+            "text": "",
+            "title": "Configuration"
+        },
+        {
+            "location": "/management_actions/configuration/#shutdown-a-mongod-instance",
+            "text": "",
+            "title": "Shutdown a mongod instance"
+        },
+        {
+            "location": "/management_actions/configuration/#mongo-shell",
+            "text": "use   admin  db . shutdownServer ();",
+            "title": "Mongo Shell"
+        },
+        {
+            "location": "/management_actions/configuration/#command-line",
+            "text": "mongod --shutdown",
+            "title": "Command line"
+        },
+        {
+            "location": "/management_actions/configuration/#using-configuration-files",
+            "text": "",
+            "title": "Using configuration files"
+        },
+        {
+            "location": "/management_actions/replication/",
+            "text": "",
+            "title": "Replication"
+        },
+        {
+            "location": "/management_actions/sharding/",
+            "text": "",
+            "title": "Sharding"
+        },
+        {
+            "location": "/management_actions/statistics/",
+            "text": "",
+            "title": "Statistics"
+        },
+        {
+            "location": "/security/encryption/",
+            "text": "",
+            "title": "Encryption"
+        },
+        {
+            "location": "/security/roles/",
+            "text": "",
+            "title": "Roles"
+        },
+        {
+            "location": "/security/auditing/",
+            "text": "",
+            "title": "Auditing"
+        },
+        {
+            "location": "/security/good_practices/",
+            "text": "",
+            "title": "Good practices"
+        },
+        {
+            "location": "/deployment/common_steps/",
+            "text": "",
+            "title": "Common steps"
+        },
+        {
+            "location": "/deployment/good_practices/",
+            "text": "",
+            "title": "Good practices"
+        },
+        {
+            "location": "/performance/indexes/",
+            "text": "",
+            "title": "Indexes"
         }
     ]
 }

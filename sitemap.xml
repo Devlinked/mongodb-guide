@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-01-22</lastmod>
+     <lastmod>2017-02-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,25 +13,123 @@
         
     <url>
      <loc>/crud/create/</loc>
-     <lastmod>2017-01-22</lastmod>
+     <lastmod>2017-02-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/crud/read/</loc>
-     <lastmod>2017-01-22</lastmod>
+     <lastmod>2017-02-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/crud/update/</loc>
-     <lastmod>2017-01-22</lastmod>
+     <lastmod>2017-02-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/crud/delete/</loc>
-     <lastmod>2017-01-22</lastmod>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/development/drivers/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/development/schema_design/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/management_actions/configuration/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/management_actions/replication/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/management_actions/sharding/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/management_actions/statistics/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/security/encryption/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/security/roles/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/security/auditing/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/security/good_practices/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/deployment/common_steps/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/deployment/good_practices/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/performance/indexes/</loc>
+     <lastmod>2017-02-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
