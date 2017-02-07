@@ -1,12 +1,31 @@
 site_name: MongoDB Guide
 theme: 'material'
 pages: 
-  - 'Introduction': 'index.md'
-  - 'CRUD Operations': 
+  - 'Introduction': index.md
+  - 'CRUD Operations':
     - 'Create': crud/create.md
     - 'Read': crud/read.md
     - 'Update': crud/update.md
     - 'Delete': crud/delete.md
+  - 'Development':
+    - 'Drivers': development/drivers.md
+    - 'Schema design': development/schema_design.md
+  - 'Management actions':
+    - 'Configuration': management_actions/configuration.md
+    - 'Replication': management_actions/replication.md
+    - 'Sharding': management_actions/sharding.md
+    - 'Statistics': management_actions/statistics.md
+  - 'Security':
+    - 'Encryption': security/encryption.md
+    - 'Roles': security/roles.md
+    - 'Auditing': security/auditing.md
+    - 'Good practices': security/good_practices.md
+  - 'Deployment':
+    - 'Common steps': deployment/common_steps.md
+    - 'Good practices': deployment/good_practices.md
+  - 'Performance':
+      - 'Indexes': performance/indexes.md
+
 markdown_extensions:
   - admonition
   - codehilite
