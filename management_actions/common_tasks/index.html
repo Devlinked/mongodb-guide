@@ -15,7 +15,7 @@
     
     
       
-        <title>Configuration - MongoDB Guide</title>
+        <title>Common tasks - MongoDB Guide</title>
       
     
     
@@ -77,7 +77,7 @@
                 </span>
               
             
-            Configuration
+            Common tasks
           
         </span>
       </div>
@@ -273,11 +273,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Configuration
+        Common tasks
       </label>
     
-    <a href="./" title="Configuration" class="md-nav__link md-nav__link--active">
-      Configuration
+    <a href="./" title="Common tasks" class="md-nav__link md-nav__link--active">
+      Common tasks
     </a>
     
       
@@ -291,8 +291,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shutdown-a-mongod-instance" title="Shutdown a mongod instance" class="md-nav__link">
-    Shutdown a mongod instance
+  <a href="#shutdown-a-mongod-instance-safely" title="Shutdown a mongod instance safely" class="md-nav__link">
+    Shutdown a mongod instance safely
   </a>
   
     <nav class="md-nav">
@@ -318,8 +318,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-configuration-files" title="Using configuration files" class="md-nav__link">
-    Using configuration files
+  <a href="#openssl-commands" title="openssl commands" class="md-nav__link">
+    openssl commands
   </a>
   
 </li>
@@ -327,6 +327,17 @@
     </ul>
   
 </nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../configuration_files/" title="Configuration files" class="md-nav__link">
+        Configuration files
+      </a>
     
   </li>
 
@@ -441,10 +452,42 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
-      Deployment
+      Performance
     </label>
     <nav class="md-nav" data-md-component="collapsible">
       <label class="md-nav__title" for="nav-6">
+        Performance
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../performance/indexes/" title="Indexes" class="md-nav__link">
+        Indexes
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Deployment
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-7">
         Deployment
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -479,33 +522,12 @@
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      Performance
-    </label>
-    <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-7">
-        Performance
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
   <li class="md-nav__item">
     
-      <a href="../../performance/indexes/" title="Indexes" class="md-nav__link">
-        Indexes
+      <a href="../../tools/" title="Tools" class="md-nav__link">
+        Tools
       </a>
     
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -530,8 +552,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shutdown-a-mongod-instance" title="Shutdown a mongod instance" class="md-nav__link">
-    Shutdown a mongod instance
+  <a href="#shutdown-a-mongod-instance-safely" title="Shutdown a mongod instance safely" class="md-nav__link">
+    Shutdown a mongod instance safely
   </a>
   
     <nav class="md-nav">
@@ -557,8 +579,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-configuration-files" title="Using configuration files" class="md-nav__link">
-    Using configuration files
+  <a href="#openssl-commands" title="openssl commands" class="md-nav__link">
+    openssl commands
   </a>
   
 </li>
@@ -576,8 +598,8 @@
                
               
                 
-                <h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
-<h2 id="shutdown-a-mongod-instance">Shutdown a mongod instance<a class="headerlink" href="#shutdown-a-mongod-instance" title="Permanent link">&para;</a></h2>
+                <h1 id="common-tasks">Common tasks<a class="headerlink" href="#common-tasks" title="Permanent link">&para;</a></h1>
+<h2 id="shutdown-a-mongod-instance-safely">Shutdown a mongod instance safely<a class="headerlink" href="#shutdown-a-mongod-instance-safely" title="Permanent link">&para;</a></h2>
 <h3 id="mongo-shell">Mongo Shell<a class="headerlink" href="#mongo-shell" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="nx">use</span> <span class="nx">admin</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">shutdownServer</span><span class="p">();</span>
@@ -589,7 +611,7 @@
 </pre></div>
 
 
-<h2 id="using-configuration-files">Using configuration files<a class="headerlink" href="#using-configuration-files" title="Permanent link">&para;</a></h2>
+<h2 id="openssl-commands">openssl commands<a class="headerlink" href="#openssl-commands" title="Permanent link">&para;</a></h2>
               
             </article>
           </div>
@@ -617,13 +639,13 @@
           </a>
         
         
-          <a href="../replication/" title="Replication" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../configuration_files/" title="Configuration files" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Replication
+                Configuration files
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

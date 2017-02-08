@@ -15,7 +15,7 @@
     
     
       
-        <title>Drivers - MongoDB Guide</title>
+        <title>Configuration files - MongoDB Guide</title>
       
     
     
@@ -73,11 +73,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Development
+                  Management actions
                 </span>
               
             
-            Drivers
+            Configuration files
           
         </span>
       </div>
@@ -208,7 +208,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Development
@@ -224,46 +224,9 @@
           
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <a href="../../development/drivers/" title="Drivers" class="md-nav__link">
         Drivers
-      </label>
-    
-    <a href="./" title="Drivers" class="md-nav__link md-nav__link--active">
-      Drivers
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nodejs" title="Node.js" class="md-nav__link">
-    Node.js
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python" title="Python" class="md-nav__link">
-    Python
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+      </a>
     
   </li>
 
@@ -272,7 +235,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../schema_design/" title="Schema design" class="md-nav__link">
+      <a href="../../development/schema_design/" title="Schema design" class="md-nav__link">
         Schema design
       </a>
     
@@ -288,7 +251,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Management actions
@@ -304,7 +267,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../management_actions/common_tasks/" title="Common tasks" class="md-nav__link">
+      <a href="../common_tasks/" title="Common tasks" class="md-nav__link">
         Common tasks
       </a>
     
@@ -315,9 +278,46 @@
           
   <li class="md-nav__item">
     
-      <a href="../../management_actions/configuration_files/" title="Configuration files" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         Configuration files
-      </a>
+      </label>
+    
+    <a href="./" title="Configuration files" class="md-nav__link md-nav__link--active">
+      Configuration files
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-a-configuration-file" title="Use a configuration File" class="md-nav__link">
+    Use a configuration File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-format" title="File format" class="md-nav__link">
+    File format
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -326,7 +326,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../management_actions/replication/" title="Replication" class="md-nav__link">
+      <a href="../replication/" title="Replication" class="md-nav__link">
         Replication
       </a>
     
@@ -337,7 +337,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../management_actions/sharding/" title="Sharding" class="md-nav__link">
+      <a href="../sharding/" title="Sharding" class="md-nav__link">
         Sharding
       </a>
     
@@ -348,7 +348,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../management_actions/statistics/" title="Statistics" class="md-nav__link">
+      <a href="../statistics/" title="Statistics" class="md-nav__link">
         Statistics
       </a>
     
@@ -532,15 +532,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nodejs" title="Node.js" class="md-nav__link">
-    Node.js
+  <a href="#use-a-configuration-file" title="Use a configuration File" class="md-nav__link">
+    Use a configuration File
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#python" title="Python" class="md-nav__link">
-    Python
+  <a href="#file-format" title="File format" class="md-nav__link">
+    File format
   </a>
   
 </li>
@@ -558,9 +558,58 @@
                
               
                 
-                <h1 id="mongodb-drivers">MongoDB drivers<a class="headerlink" href="#mongodb-drivers" title="Permanent link">&para;</a></h1>
-<h2 id="nodejs">Node.js<a class="headerlink" href="#nodejs" title="Permanent link">&para;</a></h2>
-<h2 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
+                <h1 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h1>
+<p>Configuration files are very useful when your <code>mongod</code> or <code>mongos</code> call it's very long and has a lot of parameters. It will prevent you to make mistakes and typos, and you will able to reuse common parameters on your instances. Very necessary when you are dealing with a encrypted replica set.</p>
+<h3 id="use-a-configuration-file">Use a configuration File<a class="headerlink" href="#use-a-configuration-file" title="Permanent link">&para;</a></h3>
+<p>To run a mongo instance using a config file, add the following parameter:</p>
+<div class="codehilite"><pre><span></span>mongod --config /home/tony/mongod.yml
+
+mongos --config /home/tony/mongos.yml
+</pre></div>
+
+
+<p>Or:</p>
+<div class="codehilite"><pre><span></span>mongod -f /home/tony/mongod.yml
+
+mongos -f /home/tony/mongos.yml
+</pre></div>
+
+
+<h3 id="file-format">File format<a class="headerlink" href="#file-format" title="Permanent link">&para;</a></h3>
+<p>MongoDB configuration files are written in <a href="http://www.yaml.org/">YAML</a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>YAML doesn't support tab indentation, so use spaces instead.</p>
+</div>
+<p>Here's a example file with a common instance of a mongod with replication, x509 authentication and encryption enabled:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">storage</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">dbPath</span><span class="p p-Indicator">:</span> <span class="s">&quot;/home/tony/awesomeReplSet/r0&quot;</span>
+<span class="l l-Scalar l-Scalar-Plain">systemLog</span><span class="p p-Indicator">:</span>
+   <span class="l l-Scalar l-Scalar-Plain">destination</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">file</span>
+   <span class="l l-Scalar l-Scalar-Plain">path</span><span class="p p-Indicator">:</span> <span class="s">&quot;/home/tony/awesomeReplSet/r0/mongo.log&quot;</span>
+<span class="l l-Scalar l-Scalar-Plain">net</span><span class="p p-Indicator">:</span>
+   <span class="l l-Scalar l-Scalar-Plain">port</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">27111</span>
+   <span class="l l-Scalar l-Scalar-Plain">ssl</span><span class="p p-Indicator">:</span>
+       <span class="l l-Scalar l-Scalar-Plain">mode</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">requireSSL</span>
+       <span class="l l-Scalar l-Scalar-Plain">PEMKeyFile</span><span class="p p-Indicator">:</span> <span class="s">&quot;/home/tony/awesomeReplSet/member0.pem&quot;</span>
+       <span class="l l-Scalar l-Scalar-Plain">CAFile</span><span class="p p-Indicator">:</span> <span class="s">&quot;/home/tony/awesomeReplSet/ca.pem&quot;</span>
+<span class="l l-Scalar l-Scalar-Plain">replication</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">replSetName</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">awesomeReplSet</span>
+<span class="l l-Scalar l-Scalar-Plain">security</span><span class="p p-Indicator">:</span>
+   <span class="l l-Scalar l-Scalar-Plain">authorization</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">enabled</span>
+   <span class="l l-Scalar l-Scalar-Plain">clusterAuthMode</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">x509</span>
+   <span class="l l-Scalar l-Scalar-Plain">enableEncryption</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+   <span class="l l-Scalar l-Scalar-Plain">encryptionKeyFile</span><span class="p p-Indicator">:</span> <span class="s">&quot;/home/tony/awesomeReplSet/mongodb-keyfile&quot;</span>
+<span class="l l-Scalar l-Scalar-Plain">processManagement</span><span class="p p-Indicator">:</span>
+   <span class="l l-Scalar l-Scalar-Plain">fork</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can combine a config file and parameters passed by the command line to have maximum flexibility.</p>
+</div>
+<p>See a complete list of MongoDB configuration files <a href="https://docs.mongodb.com/manual/reference/configuration-options/#core-options">here</a>.</p>
               
             </article>
           </div>
@@ -573,7 +622,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../crud/delete/" title="Delete" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../common_tasks/" title="Common tasks" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -582,19 +631,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Delete
+                Common tasks
               </span>
             </div>
           </a>
         
         
-          <a href="../schema_design/" title="Schema design" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../replication/" title="Replication" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Schema design
+                Replication
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

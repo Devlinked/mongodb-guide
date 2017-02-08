@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/",
-            "text": "MongoDB Guide\n\u00b6\n\n\nThis documentation has the objective to gather useful information about MongoDB that we have learnt with development and production experience, research and notes taken from \nMongoDB University\n courses.",
+            "text": "MongoDB Guide\n\u00b6\n\n\nThis documentation has the objective of gather useful information about MongoDB that we have learnt with development and production experience, research and notes taken from \nMongoDB University\n courses.\n\n\nThis guide is not a MongoDB documentation rewrite, rather is a collection of useful commands, tips and links to the actual MongoDB documentation.",
             "title": "Introduction"
         },
         {
             "location": "/#mongodb-guide",
-            "text": "This documentation has the objective to gather useful information about MongoDB that we have learnt with development and production experience, research and notes taken from  MongoDB University  courses.",
+            "text": "This documentation has the objective of gather useful information about MongoDB that we have learnt with development and production experience, research and notes taken from  MongoDB University  courses.  This guide is not a MongoDB documentation rewrite, rather is a collection of useful commands, tips and links to the actual MongoDB documentation.",
             "title": "MongoDB Guide"
         },
         {
@@ -91,34 +91,54 @@
             "title": "Schema design"
         },
         {
-            "location": "/management_actions/configuration/",
-            "text": "Configuration\n\u00b6\n\n\nShutdown a mongod instance\n\u00b6\n\n\nMongo Shell\n\u00b6\n\n\nuse\n \nadmin\n\n\ndb\n.\nshutdownServer\n();\n\n\n\n\n\n\nCommand line\n\u00b6\n\n\nmongod --shutdown\n\n\n\n\n\nUsing configuration files\n\u00b6",
-            "title": "Configuration"
+            "location": "/management_actions/common_tasks/",
+            "text": "Common tasks\n\u00b6\n\n\nShutdown a mongod instance safely\n\u00b6\n\n\nMongo Shell\n\u00b6\n\n\nuse\n \nadmin\n\n\ndb\n.\nshutdownServer\n();\n\n\n\n\n\n\nCommand line\n\u00b6\n\n\nmongod --shutdown\n\n\n\n\n\nopenssl commands\n\u00b6",
+            "title": "Common tasks"
         },
         {
-            "location": "/management_actions/configuration/#configuration",
+            "location": "/management_actions/common_tasks/#common-tasks",
             "text": "",
-            "title": "Configuration"
+            "title": "Common tasks"
         },
         {
-            "location": "/management_actions/configuration/#shutdown-a-mongod-instance",
+            "location": "/management_actions/common_tasks/#shutdown-a-mongod-instance-safely",
             "text": "",
-            "title": "Shutdown a mongod instance"
+            "title": "Shutdown a mongod instance safely"
         },
         {
-            "location": "/management_actions/configuration/#mongo-shell",
+            "location": "/management_actions/common_tasks/#mongo-shell",
             "text": "use   admin  db . shutdownServer ();",
             "title": "Mongo Shell"
         },
         {
-            "location": "/management_actions/configuration/#command-line",
+            "location": "/management_actions/common_tasks/#command-line",
             "text": "mongod --shutdown",
             "title": "Command line"
         },
         {
-            "location": "/management_actions/configuration/#using-configuration-files",
+            "location": "/management_actions/common_tasks/#openssl-commands",
             "text": "",
-            "title": "Using configuration files"
+            "title": "openssl commands"
+        },
+        {
+            "location": "/management_actions/configuration_files/",
+            "text": "Configuration files\n\u00b6\n\n\nConfiguration files are very useful when your \nmongod\n or \nmongos\n call it's very long and has a lot of parameters. It will prevent you to make mistakes and typos, and you will able to reuse common parameters on your instances. Very necessary when you are dealing with a encrypted replica set.\n\n\nUse a configuration File\n\u00b6\n\n\nTo run a mongo instance using a config file, add the following parameter:\n\n\nmongod --config /home/tony/mongod.yml\n\nmongos --config /home/tony/mongos.yml\n\n\n\n\n\nOr:\n\n\nmongod -f /home/tony/mongod.yml\n\nmongos -f /home/tony/mongos.yml\n\n\n\n\n\nFile format\n\u00b6\n\n\nMongoDB configuration files are written in \nYAML\n. \n\n\n\n\nNote\n\n\nYAML doesn't support tab indentation, so use spaces instead.\n\n\n\n\nHere's a example file with a common instance of a mongod with replication, x509 authentication and encryption enabled:\n\n\nstorage\n:\n\n    \ndbPath\n:\n \n\"/home/tony/awesomeReplSet/r0\"\n\n\nsystemLog\n:\n\n   \ndestination\n:\n \nfile\n\n   \npath\n:\n \n\"/home/tony/awesomeReplSet/r0/mongo.log\"\n\n\nnet\n:\n\n   \nport\n:\n \n27111\n\n   \nssl\n:\n\n       \nmode\n:\n \nrequireSSL\n\n       \nPEMKeyFile\n:\n \n\"/home/tony/awesomeReplSet/member0.pem\"\n\n       \nCAFile\n:\n \n\"/home/tony/awesomeReplSet/ca.pem\"\n\n\nreplication\n:\n\n    \nreplSetName\n:\n \nawesomeReplSet\n\n\nsecurity\n:\n\n   \nauthorization\n:\n \nenabled\n\n   \nclusterAuthMode\n:\n \nx509\n\n   \nenableEncryption\n:\n \ntrue\n\n   \nencryptionKeyFile\n:\n \n\"/home/tony/awesomeReplSet/mongodb-keyfile\"\n\n\nprocessManagement\n:\n\n   \nfork\n:\n \ntrue\n\n\n\n\n\n\n\n\nTip\n\n\nYou can combine a config file and parameters passed by the command line to have maximum flexibility.\n\n\n\n\nSee a complete list of MongoDB configuration files \nhere\n.",
+            "title": "Configuration files"
+        },
+        {
+            "location": "/management_actions/configuration_files/#configuration-files",
+            "text": "Configuration files are very useful when your  mongod  or  mongos  call it's very long and has a lot of parameters. It will prevent you to make mistakes and typos, and you will able to reuse common parameters on your instances. Very necessary when you are dealing with a encrypted replica set.",
+            "title": "Configuration files"
+        },
+        {
+            "location": "/management_actions/configuration_files/#use-a-configuration-file",
+            "text": "To run a mongo instance using a config file, add the following parameter:  mongod --config /home/tony/mongod.yml\n\nmongos --config /home/tony/mongos.yml  Or:  mongod -f /home/tony/mongod.yml\n\nmongos -f /home/tony/mongos.yml",
+            "title": "Use a configuration File"
+        },
+        {
+            "location": "/management_actions/configuration_files/#file-format",
+            "text": "MongoDB configuration files are written in  YAML .    Note  YAML doesn't support tab indentation, so use spaces instead.   Here's a example file with a common instance of a mongod with replication, x509 authentication and encryption enabled:  storage : \n     dbPath :   \"/home/tony/awesomeReplSet/r0\"  systemLog : \n    destination :   file \n    path :   \"/home/tony/awesomeReplSet/r0/mongo.log\"  net : \n    port :   27111 \n    ssl : \n        mode :   requireSSL \n        PEMKeyFile :   \"/home/tony/awesomeReplSet/member0.pem\" \n        CAFile :   \"/home/tony/awesomeReplSet/ca.pem\"  replication : \n     replSetName :   awesomeReplSet  security : \n    authorization :   enabled \n    clusterAuthMode :   x509 \n    enableEncryption :   true \n    encryptionKeyFile :   \"/home/tony/awesomeReplSet/mongodb-keyfile\"  processManagement : \n    fork :   true    Tip  You can combine a config file and parameters passed by the command line to have maximum flexibility.   See a complete list of MongoDB configuration files  here .",
+            "title": "File format"
         },
         {
             "location": "/management_actions/replication/",
@@ -142,8 +162,23 @@
         },
         {
             "location": "/security/roles/",
+            "text": "Roles\n\u00b6\n\n\nCommon built in roles\n\u00b6\n\n\nCustom roles\n\u00b6",
+            "title": "Roles"
+        },
+        {
+            "location": "/security/roles/#roles",
             "text": "",
             "title": "Roles"
+        },
+        {
+            "location": "/security/roles/#common-built-in-roles",
+            "text": "",
+            "title": "Common built in roles"
+        },
+        {
+            "location": "/security/roles/#custom-roles",
+            "text": "",
+            "title": "Custom roles"
         },
         {
             "location": "/security/auditing/",
@@ -156,6 +191,11 @@
             "title": "Good practices"
         },
         {
+            "location": "/performance/indexes/",
+            "text": "",
+            "title": "Indexes"
+        },
+        {
             "location": "/deployment/common_steps/",
             "text": "",
             "title": "Common steps"
@@ -166,9 +206,9 @@
             "title": "Good practices"
         },
         {
-            "location": "/performance/indexes/",
-            "text": "",
-            "title": "Indexes"
+            "location": "/tools/",
+            "text": "Mongoclient\n\n\nmtools",
+            "title": "Tools"
         }
     ]
 }

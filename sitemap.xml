@@ -56,7 +56,13 @@
     
         
     <url>
-     <loc>/management_actions/configuration/</loc>
+     <loc>/management_actions/common_tasks/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/management_actions/configuration_files/</loc>
      <lastmod>2017-02-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -112,6 +118,16 @@
     
         
     <url>
+     <loc>/performance/indexes/</loc>
+     <lastmod>2017-02-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/deployment/common_steps/</loc>
      <lastmod>2017-02-07</lastmod>
      <changefreq>daily</changefreq>
@@ -126,13 +142,11 @@
     
 
     
-        
     <url>
-     <loc>/performance/indexes/</loc>
+     <loc>/tools/</loc>
      <lastmod>2017-02-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     
 
 </urlset>
