@@ -1,6 +1,6 @@
-# Configuration
+# Common tasks
 
-## Shutdown a mongod instance
+## Shutdown a mongod instance safely
 
 ### Mongo Shell
 
@@ -10,8 +10,8 @@ db.shutdownServer();
 ```
 
 ### Command line
-``` bash
+```bash
 mongod --shutdown
 ```
 
-## Using configuration files
+## openssl commands
