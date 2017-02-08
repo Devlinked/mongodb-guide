@@ -11,7 +11,8 @@ pages:
     - 'Drivers': development/drivers.md
     - 'Schema design': development/schema_design.md
   - 'Management actions':
-    - 'Configuration': management_actions/configuration.md
+    - 'Common tasks': management_actions/common_tasks.md
+    - 'Configuration files': management_actions/configuration_files.md
     - 'Replication': management_actions/replication.md
     - 'Sharding': management_actions/sharding.md
     - 'Statistics': management_actions/statistics.md
@@ -20,11 +21,12 @@ pages:
     - 'Roles': security/roles.md
     - 'Auditing': security/auditing.md
     - 'Good practices': security/good_practices.md
+  - 'Performance':
+      - 'Indexes': performance/indexes.md
   - 'Deployment':
     - 'Common steps': deployment/common_steps.md
     - 'Good practices': deployment/good_practices.md
-  - 'Performance':
-      - 'Indexes': performance/indexes.md
+  - 'Tools': tools.md
 
 markdown_extensions:
   - admonition
