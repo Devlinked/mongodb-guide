@@ -10,7 +10,7 @@
         <meta name="description" content="MongoDB cookbook and guide">
       
       
-        <link rel="canonical" href="https://devlinked.github.io/mongodb-guide/crud/create/">
+        <link rel="canonical" href="https://devlinked.github.io/mongodb-guide/diagnostics_and_debugging/common_issues/">
       
       
         <meta name="author" content="Juan Henriquez & Samuel Murillo">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Create - MongoDB Guide</title>
+        <title>Common issues - MongoDB Guide</title>
       
     
     
@@ -83,11 +83,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  CRUD Operations
+                  Diagnostics and Debugging
                 </span>
               
             
-            Create
+            Common issues
           
         </span>
       </div>
@@ -204,12 +204,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       CRUD Operations
@@ -225,61 +223,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Create
-      </label>
-    
-    <a href="./" title="Create" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../crud/create/" title="Create" class="md-nav__link">
       Create
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dbcollectioninsertone" title="db.collection.insertOne" class="md-nav__link">
-    db.collection.insertOne
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dbcollectioninsertmany" title="db.collection.insertMany" class="md-nav__link">
-    db.collection.insertMany
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dbcollectioninsert" title="db.collection.insert" class="md-nav__link">
-    db.collection.insert
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -289,7 +237,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../read/" title="Read" class="md-nav__link">
+    <a href="../../crud/read/" title="Read" class="md-nav__link">
       Read
     </a>
   </li>
@@ -301,7 +249,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../update/" title="Update" class="md-nav__link">
+    <a href="../../crud/update/" title="Update" class="md-nav__link">
       Update
     </a>
   </li>
@@ -313,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../delete/" title="Delete" class="md-nav__link">
+    <a href="../../crud/delete/" title="Delete" class="md-nav__link">
       Delete
     </a>
   </li>
@@ -325,7 +273,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../aggregation_framework/" title="Aggregation Framework" class="md-nav__link">
+    <a href="../../crud/aggregation_framework/" title="Aggregation Framework" class="md-nav__link">
       Aggregation Framework
     </a>
   </li>
@@ -592,10 +540,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
       Diagnostics and Debugging
@@ -611,11 +561,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../diagnostics_and_debugging/common_issues/" title="Common issues" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="Common issues" class="md-nav__link md-nav__link--active">
       Common issues
     </a>
+    
   </li>
 
         
@@ -625,7 +582,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../diagnostics_and_debugging/tools/" title="Tools" class="md-nav__link">
+    <a href="../tools/" title="Tools" class="md-nav__link">
       Tools
     </a>
   </li>
@@ -698,36 +655,6 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dbcollectioninsertone" title="db.collection.insertOne" class="md-nav__link">
-    db.collection.insertOne
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dbcollectioninsertmany" title="db.collection.insertMany" class="md-nav__link">
-    db.collection.insertMany
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dbcollectioninsert" title="db.collection.insert" class="md-nav__link">
-    db.collection.insert
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
   
 </nav>
                   </div>
@@ -740,53 +667,9 @@
               
                 
                 
-                <h1 id="create">Create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h1>
-<h2 id="dbcollectioninsertone">db.collection.insertOne<a class="headerlink" href="#dbcollectioninsertone" title="Permanent link">&para;</a></h2>
-<p>Insert a single document into a collection.</p>
-<div class="codehilite"><pre><span></span><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">insertOne</span><span class="p">({</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Deadpool&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2016</span> <span class="p">});</span>
-</pre></div>
-
-
-<h2 id="dbcollectioninsertmany">db.collection.insertMany<a class="headerlink" href="#dbcollectioninsertmany" title="Permanent link">&para;</a></h2>
-<p>Insert multiple documents into a collection.</p>
-<div class="codehilite"><pre><span></span><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">(</span>
-  <span class="p">[</span>
-    <span class="p">{</span> <span class="s2">&quot;_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Deadpool&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2016</span> <span class="p">},</span> 
-    <span class="p">{</span> <span class="s2">&quot;_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Scarface&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">1983</span> <span class="p">},</span> <span class="c1">// has the same id that Deadpool</span>
-    <span class="p">{</span> <span class="s2">&quot;_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Avatar&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2009</span> <span class="p">},</span>
-  <span class="p">]</span>
-<span class="p">);</span>
-</pre></div>
-
-
-<p>By default, <code>insertMany</code> insert all the documents with the parameter <code>ordered</code> set to true,
-this means that mongo will insert all the documents one by one from top to bottom but
-if in the middle of the operation mongo finds an error with at least one document, the process will stop.</p>
-<div class="codehilite"><pre><span></span><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">(</span>
-  <span class="p">[</span>
-    <span class="p">{</span> <span class="s2">&quot;_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Deadpool&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2016</span> <span class="p">},</span> 
-    <span class="p">{</span> <span class="s2">&quot;_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Scarface&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">1983</span> <span class="p">},</span> <span class="c1">// has the same id that Deadpool</span>
-    <span class="p">{</span> <span class="s2">&quot;_id&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Avatar&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2009</span> <span class="p">},</span>
-  <span class="p">]</span>
-<span class="p">);</span>
-</pre></div>
-
-
-<p>Using the parameter <code>ordered</code> with <code>false</code> as value, mongo will skip the error (if exist) and
-will insert successfuly all the documents that have no errors.</p>
-<div class="codehilite"><pre><span></span><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">insertMany</span><span class="p">(</span>
-  <span class="p">[</span>
-    <span class="p">{</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Deadpool&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2016</span> <span class="p">},</span> 
-    <span class="p">{</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Scarface&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">1983</span> <span class="p">}</span>
-  <span class="p">],</span>
-  <span class="p">{</span> <span class="s2">&quot;ordered&quot;</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span>
-<span class="p">);</span>
-</pre></div>
-
-
-<h2 id="dbcollectioninsert">db.collection.insert<a class="headerlink" href="#dbcollectioninsert" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="nx">db</span><span class="p">.</span><span class="nx">movies</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span> <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Deadpool&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="o">:</span> <span class="mi">2016</span> <span class="p">});</span>
-</pre></div>
+                  <h1>Common issues</h1>
+                
+                
                 
                   
                 
@@ -805,7 +688,7 @@ will insert successfuly all the documents that have no errors.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../performance/indexes/" title="Indexes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -814,19 +697,19 @@ will insert successfuly all the documents that have no errors.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Introduction
+                Indexes
               </span>
             </div>
           </a>
         
         
-          <a href="../read/" title="Read" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../tools/" title="Tools" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Read
+                Tools
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

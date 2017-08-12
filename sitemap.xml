@@ -3,8 +3,8 @@
 
     
     <url>
-     <loc>/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,42 +12,32 @@
     
         
     <url>
-     <loc>/crud/create/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//crud/create/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/crud/read/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//crud/read/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/crud/update/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//crud/update/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/crud/delete/</loc>
-     <lastmod>2017-02-07</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>/development/drivers/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//crud/delete/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/development/schema_design/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//crud/aggregation_framework/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -56,32 +46,20 @@
     
         
     <url>
-     <loc>/management_actions/common_tasks/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//development/drivers/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/management_actions/configuration_files/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//development/schema_design/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/management_actions/replication/</loc>
-     <lastmod>2017-02-07</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/management_actions/sharding/</loc>
-     <lastmod>2017-02-07</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/management_actions/statistics/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//development/read_only_views/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -90,26 +68,32 @@
     
         
     <url>
-     <loc>/security/encryption/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//management_actions/common_tasks/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/security/roles/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//management_actions/configuration_files/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/security/auditing/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//management_actions/replication/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/security/good_practices/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//management_actions/sharding/</loc>
+     <lastmod>2017-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://devlinked.github.io/mongodb-guide//management_actions/statistics/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -118,8 +102,26 @@
     
         
     <url>
-     <loc>/performance/indexes/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//security/encryption/</loc>
+     <lastmod>2017-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://devlinked.github.io/mongodb-guide//security/roles/</loc>
+     <lastmod>2017-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://devlinked.github.io/mongodb-guide//security/auditing/</loc>
+     <lastmod>2017-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://devlinked.github.io/mongodb-guide//security/good_practices/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -128,25 +130,43 @@
     
         
     <url>
-     <loc>/deployment/common_steps/</loc>
-     <lastmod>2017-02-07</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/deployment/good_practices/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//performance/indexes/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     
 
     
+        
     <url>
-     <loc>/tools/</loc>
-     <lastmod>2017-02-07</lastmod>
+     <loc>https://devlinked.github.io/mongodb-guide//diagnostics_and_debugging/common_issues/</loc>
+     <lastmod>2017-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>https://devlinked.github.io/mongodb-guide//diagnostics_and_debugging/tools/</loc>
+     <lastmod>2017-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://devlinked.github.io/mongodb-guide//deployment/common_steps/</loc>
+     <lastmod>2017-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://devlinked.github.io/mongodb-guide//deployment/good_practices/</loc>
+     <lastmod>2017-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

@@ -2,17 +2,17 @@
     "docs": [
         {
             "location": "/",
-            "text": "MongoDB Guide\n\u00b6\n\n\nThis documentation has the objective of gather useful information about MongoDB that we have learnt with development and production experience, research and notes taken from \nMongoDB University\n courses.\n\n\nThis guide is not a MongoDB documentation rewrite, rather is a collection of useful commands, tips and links to the actual MongoDB documentation.",
+            "text": "MongoDB Guide\n\u00b6\n\n\nThis documentation has the objective of gather useful information about MongoDB that we have learnt with development and production experience, research and notes taken from \nMongoDB University\n courses.\n\n\nThis guide is not a MongoDB documentation rewrite, rather is a collection of useful commands, quick examples, tips and links to the actual MongoDB documentation.",
             "title": "Introduction"
         },
         {
             "location": "/#mongodb-guide",
-            "text": "This documentation has the objective of gather useful information about MongoDB that we have learnt with development and production experience, research and notes taken from  MongoDB University  courses.  This guide is not a MongoDB documentation rewrite, rather is a collection of useful commands, tips and links to the actual MongoDB documentation.",
+            "text": "This documentation has the objective of gather useful information about MongoDB that we have learnt with development and production experience, research and notes taken from  MongoDB University  courses.  This guide is not a MongoDB documentation rewrite, rather is a collection of useful commands, quick examples, tips and links to the actual MongoDB documentation.",
             "title": "MongoDB Guide"
         },
         {
             "location": "/crud/create/",
-            "text": "Create\n\u00b6\n\n\ndb.collection.insertOne\n\u00b6\n\n\nInsert a single document into a collection.\n\n\ndb\n.\nmovies\n.\ninsertOne\n({\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n});\n\n\n\n\n\n\ndb.collection.insertMany\n\u00b6\n\n\nInsert multiple documents into a collection.\n\n\ndb\n.\nmovies\n.\ninsertMany\n(\n\n  \n[\n\n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n},\n \n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Scarface\"\n,\n \n\"year\"\n:\n \n1983\n \n},\n \n// have the same id that Deadpool\n\n    \n{\n \n\"_id\"\n:\n \n2\n,\n \n\"title\"\n:\n \n\"Avatar\"\n,\n \n\"year\"\n:\n \n2009\n \n},\n\n  \n]\n\n\n);\n\n\n\n\n\n\nBy default, \ninsertMany\n insert all the documents with the parameter \nordered\n set to true,\nthis means that mongo will insert all the documents one by one from top to bottom but\nif in the middle of the operation mongo finds an error with at least one document, the process will stop.\n\n\ndb\n.\nmovies\n.\ninsertMany\n(\n\n  \n[\n\n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n},\n \n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Scarface\"\n,\n \n\"year\"\n:\n \n1983\n \n},\n \n// have the same id that Deadpool\n\n    \n{\n \n\"_id\"\n:\n \n2\n,\n \n\"title\"\n:\n \n\"Avatar\"\n,\n \n\"year\"\n:\n \n2009\n \n},\n\n  \n]\n\n\n);\n\n\n\n\n\n\nUsing the parameter \nordered\n with \nfalse\n as value, mongo will skip the error (if exist) and\nwill insert successfuly all the documents that have no errors.\n\n\ndb\n.\nmovies\n.\ninsertMany\n(\n\n  \n[\n\n    \n{\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n},\n \n    \n{\n \n\"title\"\n:\n \n\"Scarface\"\n,\n \n\"year\"\n:\n \n1983\n \n}\n\n  \n],\n\n  \n{\n \n\"ordered\"\n:\n \nfalse\n \n}\n\n\n);\n\n\n\n\n\n\ndb.collection.insert\n\u00b6\n\n\ndb\n.\nmovies\n.\ninsert\n({\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n});",
+            "text": "Create\n\u00b6\n\n\ndb.collection.insertOne\n\u00b6\n\n\nInsert a single document into a collection.\n\n\ndb\n.\nmovies\n.\ninsertOne\n({\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n});\n\n\n\n\n\n\ndb.collection.insertMany\n\u00b6\n\n\nInsert multiple documents into a collection.\n\n\ndb\n.\nmovies\n.\ninsertMany\n(\n\n  \n[\n\n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n},\n \n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Scarface\"\n,\n \n\"year\"\n:\n \n1983\n \n},\n \n// has the same id that Deadpool\n\n    \n{\n \n\"_id\"\n:\n \n2\n,\n \n\"title\"\n:\n \n\"Avatar\"\n,\n \n\"year\"\n:\n \n2009\n \n},\n\n  \n]\n\n\n);\n\n\n\n\n\n\nBy default, \ninsertMany\n insert all the documents with the parameter \nordered\n set to true,\nthis means that mongo will insert all the documents one by one from top to bottom but\nif in the middle of the operation mongo finds an error with at least one document, the process will stop.\n\n\ndb\n.\nmovies\n.\ninsertMany\n(\n\n  \n[\n\n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n},\n \n    \n{\n \n\"_id\"\n:\n \n1\n,\n \n\"title\"\n:\n \n\"Scarface\"\n,\n \n\"year\"\n:\n \n1983\n \n},\n \n// has the same id that Deadpool\n\n    \n{\n \n\"_id\"\n:\n \n2\n,\n \n\"title\"\n:\n \n\"Avatar\"\n,\n \n\"year\"\n:\n \n2009\n \n},\n\n  \n]\n\n\n);\n\n\n\n\n\n\nUsing the parameter \nordered\n with \nfalse\n as value, mongo will skip the error (if exist) and\nwill insert successfuly all the documents that have no errors.\n\n\ndb\n.\nmovies\n.\ninsertMany\n(\n\n  \n[\n\n    \n{\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n},\n \n    \n{\n \n\"title\"\n:\n \n\"Scarface\"\n,\n \n\"year\"\n:\n \n1983\n \n}\n\n  \n],\n\n  \n{\n \n\"ordered\"\n:\n \nfalse\n \n}\n\n\n);\n\n\n\n\n\n\ndb.collection.insert\n\u00b6\n\n\ndb\n.\nmovies\n.\ninsert\n({\n \n\"title\"\n:\n \n\"Deadpool\"\n,\n \n\"year\"\n:\n \n2016\n \n});",
             "title": "Create"
         },
         {
@@ -27,7 +27,7 @@
         },
         {
             "location": "/crud/create/#dbcollectioninsertmany",
-            "text": "Insert multiple documents into a collection.  db . movies . insertMany ( \n   [ \n     {   \"_id\" :   1 ,   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   },  \n     {   \"_id\" :   1 ,   \"title\" :   \"Scarface\" ,   \"year\" :   1983   },   // have the same id that Deadpool \n     {   \"_id\" :   2 ,   \"title\" :   \"Avatar\" ,   \"year\" :   2009   }, \n   ]  );   By default,  insertMany  insert all the documents with the parameter  ordered  set to true,\nthis means that mongo will insert all the documents one by one from top to bottom but\nif in the middle of the operation mongo finds an error with at least one document, the process will stop.  db . movies . insertMany ( \n   [ \n     {   \"_id\" :   1 ,   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   },  \n     {   \"_id\" :   1 ,   \"title\" :   \"Scarface\" ,   \"year\" :   1983   },   // have the same id that Deadpool \n     {   \"_id\" :   2 ,   \"title\" :   \"Avatar\" ,   \"year\" :   2009   }, \n   ]  );   Using the parameter  ordered  with  false  as value, mongo will skip the error (if exist) and\nwill insert successfuly all the documents that have no errors.  db . movies . insertMany ( \n   [ \n     {   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   },  \n     {   \"title\" :   \"Scarface\" ,   \"year\" :   1983   } \n   ], \n   {   \"ordered\" :   false   }  );",
+            "text": "Insert multiple documents into a collection.  db . movies . insertMany ( \n   [ \n     {   \"_id\" :   1 ,   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   },  \n     {   \"_id\" :   1 ,   \"title\" :   \"Scarface\" ,   \"year\" :   1983   },   // has the same id that Deadpool \n     {   \"_id\" :   2 ,   \"title\" :   \"Avatar\" ,   \"year\" :   2009   }, \n   ]  );   By default,  insertMany  insert all the documents with the parameter  ordered  set to true,\nthis means that mongo will insert all the documents one by one from top to bottom but\nif in the middle of the operation mongo finds an error with at least one document, the process will stop.  db . movies . insertMany ( \n   [ \n     {   \"_id\" :   1 ,   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   },  \n     {   \"_id\" :   1 ,   \"title\" :   \"Scarface\" ,   \"year\" :   1983   },   // has the same id that Deadpool \n     {   \"_id\" :   2 ,   \"title\" :   \"Avatar\" ,   \"year\" :   2009   }, \n   ]  );   Using the parameter  ordered  with  false  as value, mongo will skip the error (if exist) and\nwill insert successfuly all the documents that have no errors.  db . movies . insertMany ( \n   [ \n     {   \"title\" :   \"Deadpool\" ,   \"year\" :   2016   },  \n     {   \"title\" :   \"Scarface\" ,   \"year\" :   1983   } \n   ], \n   {   \"ordered\" :   false   }  );",
             "title": "db.collection.insertMany"
         },
         {
@@ -66,6 +66,11 @@
             "title": "Delete"
         },
         {
+            "location": "/crud/aggregation_framework/",
+            "text": "Aggregation Framework",
+            "title": "Aggregation Framework"
+        },
+        {
             "location": "/development/drivers/",
             "text": "MongoDB drivers\n\u00b6\n\n\nNode.js\n\u00b6\n\n\nPython\n\u00b6",
             "title": "Drivers"
@@ -91,8 +96,13 @@
             "title": "Schema design"
         },
         {
+            "location": "/development/read_only_views/",
+            "text": "db\n.\ncreateView\n(\n\n     \n\"peopleSectors\"\n,\n \n     \n\"people\"\n,\n \n     \n[\n\n         \n{\n \n            \n$lookup\n:\n \n{\n\n                \nfrom\n:\n \n\"companies\"\n,\n\n                \nlocalField\n:\n \n\"company_id\"\n,\n\n                \nforeignField\n:\n \n\"_id\"\n,\n\n                \nas\n:\n \n\"sector\"\n\n            \n}\n \n        \n},\n\n        \n{\n \n$unwind\n:\n \n\"$sector\"\n \n},\n\n        \n{\n \n            \n$project\n:\n \n{\n\n                \n\"_id\"\n:\n \n0\n,\n \n                \n\"company_id\"\n:\n \n1\n,\n\n                \n\"first_name\"\n:\n \n1\n,\n \n                \n\"last_name\"\n:\n \n1\n,\n \n                \n\"job\"\n:\n \n1\n,\n \n                \n\"sector\"\n:\n \n\"$sector.sector\"\n,\n\n                \n\"company\"\n:\n \n\"$sector.name\"\n,\n\n            \n}\n\n        \n},\n\n        \n{\n \n            \n$project\n:\n \n{\n\n                \n\"company_id\"\n:\n \n0\n,\n\n            \n}\n\n        \n}\n\n     \n]\n\n\n)\n\n\n\n\n\n\ndb\n.\ncreateView\n(\n\n     \n\"tweets_sql\"\n,\n \n     \n\"tweets\"\n,\n \n     \n[\n\n        \n{\n \n            \n$project\n:\n \n{\n\n                \n\"_id\"\n:\n \n1\n,\n \n                \n\"created_at\"\n:\n \n1\n,\n\n                \n\"id\"\n:\n \n1\n,\n \n                \n\"source\"\n:\n \n1\n,\n \n                \n\"text\"\n:\n \n1\n,\n \n                \n\"user_id\"\n:\n \n\"$user.id\"\n,\n\n                \n\"language\"\n:\n \n\"$user.lang\"\n,\n\n                \n\"location\"\n:\n \n\"$user.location\"\n,\n\n                \n\"name\"\n:\n \n\"$user.name\"\n,\n\n                \n\"screen_name\"\n:\n \n\"$user.screen_name\"\n\n            \n}\n\n        \n}\n       \n     \n]\n\n\n)",
+            "title": "Read-only views"
+        },
+        {
             "location": "/management_actions/common_tasks/",
-            "text": "Common tasks\n\u00b6\n\n\nShutdown a mongod instance safely\n\u00b6\n\n\nMongo Shell\n\u00b6\n\n\nuse\n \nadmin\n\n\ndb\n.\nshutdownServer\n();\n\n\n\n\n\n\nCommand line\n\u00b6\n\n\nmongod --shutdown\n\n\n\n\n\nopenssl commands\n\u00b6",
+            "text": "Common tasks\n\u00b6\n\n\nShutdown a mongod instance safely\n\u00b6\n\n\nMongo Shell\n\u00b6\n\n\nuse\n \nadmin\n\n\ndb\n.\nshutdownServer\n();\n\n\n\n\n\n\nCommand line\n\u00b6\n\n\nmongod --dbpath ~/db/ --shutdown\n\n\n\n\n\nImport and export data\n\u00b6\n\n\nImport\n\u00b6\n\n\nmongoimport --port \n12345\n --db database --collection mycollection --file filename.json\n\n\n\n\n\nopenssl commands\n\u00b6",
             "title": "Common tasks"
         },
         {
@@ -112,8 +122,18 @@
         },
         {
             "location": "/management_actions/common_tasks/#command-line",
-            "text": "mongod --shutdown",
+            "text": "mongod --dbpath ~/db/ --shutdown",
             "title": "Command line"
+        },
+        {
+            "location": "/management_actions/common_tasks/#import-and-export-data",
+            "text": "",
+            "title": "Import and export data"
+        },
+        {
+            "location": "/management_actions/common_tasks/#import",
+            "text": "mongoimport --port  12345  --db database --collection mycollection --file filename.json",
+            "title": "Import"
         },
         {
             "location": "/management_actions/common_tasks/#openssl-commands",
@@ -142,8 +162,53 @@
         },
         {
             "location": "/management_actions/replication/",
-            "text": "",
+            "text": "Replication\n\u00b6\n\n\nA replica set consists in several instances of \nmongod\n running at different servers. Its purpose is to save a copy the database at each server (redundancy of data).\n\n\nIt is formed by a Primary server, a number of secondary servers and optionally, a number of arbiters. The primary is normally the one that receives the commands from Mongo drivers.\n\n\nCommon configurations\n\u00b6\n\n\nIt is recommended to have a odd number of replica set members.\n\n\n3 members in the replica set\n\u00b6\n\n\nThis is the most common configuration\n\n\n2 members in the replica set and an arbiter\n\u00b6\n\n\n5 members in the replica set\n\u00b6\n\n\nCreate a replica set\n\u00b6\n\n\nmongod --replSet myReplSet --dbpath ~/db/r1 --logpath ~/db/r1/mongodb.log --port \n30000\n --fork\n\n\n\n\n\nAdd a member to a running replica set\n\u00b6\n\n\nReconfig\n\u00b6\n\n\nArbiters\n\u00b6",
             "title": "Replication"
+        },
+        {
+            "location": "/management_actions/replication/#replication",
+            "text": "A replica set consists in several instances of  mongod  running at different servers. Its purpose is to save a copy the database at each server (redundancy of data).  It is formed by a Primary server, a number of secondary servers and optionally, a number of arbiters. The primary is normally the one that receives the commands from Mongo drivers.",
+            "title": "Replication"
+        },
+        {
+            "location": "/management_actions/replication/#common-configurations",
+            "text": "It is recommended to have a odd number of replica set members.",
+            "title": "Common configurations"
+        },
+        {
+            "location": "/management_actions/replication/#3-members-in-the-replica-set",
+            "text": "This is the most common configuration",
+            "title": "3 members in the replica set"
+        },
+        {
+            "location": "/management_actions/replication/#2-members-in-the-replica-set-and-an-arbiter",
+            "text": "",
+            "title": "2 members in the replica set and an arbiter"
+        },
+        {
+            "location": "/management_actions/replication/#5-members-in-the-replica-set",
+            "text": "",
+            "title": "5 members in the replica set"
+        },
+        {
+            "location": "/management_actions/replication/#create-a-replica-set",
+            "text": "mongod --replSet myReplSet --dbpath ~/db/r1 --logpath ~/db/r1/mongodb.log --port  30000  --fork",
+            "title": "Create a replica set"
+        },
+        {
+            "location": "/management_actions/replication/#add-a-member-to-a-running-replica-set",
+            "text": "",
+            "title": "Add a member to a running replica set"
+        },
+        {
+            "location": "/management_actions/replication/#reconfig",
+            "text": "",
+            "title": "Reconfig"
+        },
+        {
+            "location": "/management_actions/replication/#arbiters",
+            "text": "",
+            "title": "Arbiters"
         },
         {
             "location": "/management_actions/sharding/",
@@ -162,7 +227,7 @@
         },
         {
             "location": "/security/roles/",
-            "text": "Roles\n\u00b6\n\n\nCommon built in roles\n\u00b6\n\n\nCustom roles\n\u00b6",
+            "text": "Roles\n\u00b6\n\n\nCommon built in roles\n\u00b6\n\n\nCreate users with a role\n\u00b6\n\n\ndb\n.\ncreateUser\n({\n\n    \nuser\n:\n \n'userAdmin'\n,\n \n    \npwd\n:\n \n'badges'\n,\n \n    \nroles\n:\n \n[\n\n        \n{\n \nrole\n:\n \n'userAdminAnyDatabase'\n,\n \ndb\n:\n \n'admin'\n \n}\n\n    \n]\n\n\n})\n\n\n\ndb\n.\ncreateUser\n({\n\n    \nuser\n:\n \n'dbAdmin'\n,\n \n    \npwd\n:\n \n'collections'\n,\n \n    \nroles\n:\n \n[\n\n        \n{\n \nrole\n:\n \n'dbAdminAnyDatabase'\n,\n \ndb\n:\n \n'admin'\n \n}\n\n    \n]\n\n\n})\n\n\n\ndb\n.\ncreateUser\n({\n\n    \nuser\n:\n \n'sysAdmin'\n,\n \n    \npwd\n:\n \n'cables'\n,\n \n    \nroles\n:\n \n[\n\n        \n{\n \nrole\n:\n \n'clusterManager'\n,\n \ndb\n:\n \n'admin'\n \n}\n\n    \n]\n\n\n})\n\n\n\ndb\n.\ncreateUser\n({\n\n    \nuser\n:\n \n'dataLoader'\n,\n \n    \npwd\n:\n \n'dumpin'\n,\n \n    \nroles\n:\n \n[\n\n        \n{\n \nrole\n:\n \n'readWriteAnyDatabase'\n,\n \ndb\n:\n \n'admin'\n \n}\n\n    \n]\n\n\n})\n\n\n\n\n\n\nCustom roles\n\u00b6\n\n\ndb\n.\ncreateRole\n({\n\n    \nrole\n:\n \n'HRDEPARTMENT'\n,\n \n    \nprivileges\n:\n \n[\n\n        \n{\n\n            \nresource\n:\n \n{\n\n                \ndb\n:\n \n'HR'\n,\n \n                \ncollection\n:\n \n''\n\n            \n},\n \n            \nactions\n:\n \n[\n\n                \n\"find\"\n,\n \n                \n\"dropUser\"\n\n            \n]\n\n        \n},\n\n        \n{\n\n            \nresource\n:\n \n{\n\n                \ndb\n:\n \n'HR'\n,\n \n                \ncollection\n:\n \n'employees'\n\n            \n},\n \n            \nactions\n:\n \n[\n\"insert\"\n]\n\n        \n}\n\n    \n],\n \n    \nroles\n:\n \n[]\n\n\n})",
             "title": "Roles"
         },
         {
@@ -176,8 +241,13 @@
             "title": "Common built in roles"
         },
         {
+            "location": "/security/roles/#create-users-with-a-role",
+            "text": "db . createUser ({ \n     user :   'userAdmin' ,  \n     pwd :   'badges' ,  \n     roles :   [ \n         {   role :   'userAdminAnyDatabase' ,   db :   'admin'   } \n     ]  })  db . createUser ({ \n     user :   'dbAdmin' ,  \n     pwd :   'collections' ,  \n     roles :   [ \n         {   role :   'dbAdminAnyDatabase' ,   db :   'admin'   } \n     ]  })  db . createUser ({ \n     user :   'sysAdmin' ,  \n     pwd :   'cables' ,  \n     roles :   [ \n         {   role :   'clusterManager' ,   db :   'admin'   } \n     ]  })  db . createUser ({ \n     user :   'dataLoader' ,  \n     pwd :   'dumpin' ,  \n     roles :   [ \n         {   role :   'readWriteAnyDatabase' ,   db :   'admin'   } \n     ]  })",
+            "title": "Create users with a role"
+        },
+        {
             "location": "/security/roles/#custom-roles",
-            "text": "",
+            "text": "db . createRole ({ \n     role :   'HRDEPARTMENT' ,  \n     privileges :   [ \n         { \n             resource :   { \n                 db :   'HR' ,  \n                 collection :   '' \n             },  \n             actions :   [ \n                 \"find\" ,  \n                 \"dropUser\" \n             ] \n         }, \n         { \n             resource :   { \n                 db :   'HR' ,  \n                 collection :   'employees' \n             },  \n             actions :   [ \"insert\" ] \n         } \n     ],  \n     roles :   []  })",
             "title": "Custom roles"
         },
         {
@@ -192,8 +262,48 @@
         },
         {
             "location": "/performance/indexes/",
-            "text": "",
+            "text": "Index definition\n\u00b6\n\n\nIndex creation\n\u00b6\n\n\nIndex dropping\n\u00b6\n\n\nConsideration while creating indexes\n\u00b6\n\n\nIndex prefix\n\u00b6\n\n\nCovered queries\n\u00b6",
             "title": "Indexes"
+        },
+        {
+            "location": "/performance/indexes/#index-definition",
+            "text": "",
+            "title": "Index definition"
+        },
+        {
+            "location": "/performance/indexes/#index-creation",
+            "text": "",
+            "title": "Index creation"
+        },
+        {
+            "location": "/performance/indexes/#index-dropping",
+            "text": "",
+            "title": "Index dropping"
+        },
+        {
+            "location": "/performance/indexes/#consideration-while-creating-indexes",
+            "text": "",
+            "title": "Consideration while creating indexes"
+        },
+        {
+            "location": "/performance/indexes/#index-prefix",
+            "text": "",
+            "title": "Index prefix"
+        },
+        {
+            "location": "/performance/indexes/#covered-queries",
+            "text": "",
+            "title": "Covered queries"
+        },
+        {
+            "location": "/diagnostics_and_debugging/common_issues/",
+            "text": "",
+            "title": "Common issues"
+        },
+        {
+            "location": "/diagnostics_and_debugging/tools/",
+            "text": "Mongoclient\n\n\nmtools",
+            "title": "Tools"
         },
         {
             "location": "/deployment/common_steps/",
@@ -204,11 +314,6 @@
             "location": "/deployment/good_practices/",
             "text": "",
             "title": "Good practices"
-        },
-        {
-            "location": "/tools/",
-            "text": "Mongoclient\n\n\nmtools",
-            "title": "Tools"
         }
     ]
 }
