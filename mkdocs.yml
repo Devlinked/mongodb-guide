@@ -1,32 +1,43 @@
 site_name: MongoDB Guide
+site_description: 'MongoDB cookbook and guide'
+site_author: 'Juan Henriquez & Samuel Murillo'
+site_url: 'https://devlinked.github.io/mongodb-guide/'
 theme: 'material'
+
 pages: 
-  - 'Introduction': index.md
-  - 'CRUD Operations':
-    - 'Create': crud/create.md
-    - 'Read': crud/read.md
-    - 'Update': crud/update.md
-    - 'Delete': crud/delete.md
-  - 'Development':
-    - 'Drivers': development/drivers.md
-    - 'Schema design': development/schema_design.md
-  - 'Management actions':
-    - 'Common tasks': management_actions/common_tasks.md
-    - 'Configuration files': management_actions/configuration_files.md
-    - 'Replication': management_actions/replication.md
-    - 'Sharding': management_actions/sharding.md
-    - 'Statistics': management_actions/statistics.md
-  - 'Security':
-    - 'Encryption': security/encryption.md
-    - 'Roles': security/roles.md
-    - 'Auditing': security/auditing.md
-    - 'Good practices': security/good_practices.md
-  - 'Performance':
-      - 'Indexes': performance/indexes.md
-  - 'Deployment':
-    - 'Common steps': deployment/common_steps.md
-    - 'Good practices': deployment/good_practices.md
-  - 'Tools': tools.md
+  - Introduction: index.md
+  - CRUD Operations:
+    - Create: crud/create.md
+    - Read: crud/read.md
+    - Update: crud/update.md
+    - Delete: crud/delete.md
+    - Aggregation Framework: crud/aggregation_framework.md
+  - Development:
+    - Drivers: development/drivers.md
+    - Schema design: development/schema_design.md
+    - Read-only views: development/read_only_views.md
+  - Management actions:
+    - Common tasks: management_actions/common_tasks.md
+    - Configuration files: management_actions/configuration_files.md
+    - Replication: management_actions/replication.md
+    - Sharding: management_actions/sharding.md
+    - Statistics: management_actions/statistics.md
+  - Security:
+    - Encryption: security/encryption.md
+    - Roles: security/roles.md
+    - Auditing: security/auditing.md
+    - Good practices: security/good_practices.md
+  - Performance:
+      - Indexes: performance/indexes.md
+  - Diagnostics and Debugging:
+      - Common issues: diagnostics_and_debugging/common_issues.md
+      - Tools: diagnostics_and_debugging/tools.md
+  - Deployment:
+    - Common steps: deployment/common_steps.md
+    - Good practices: deployment/good_practices.md
+
+repo_name: 'devlinked/mongodb-guide'
+repo_url: 'https://github.com/Devlinked/mongodb-guide'
 
 markdown_extensions:
   - admonition
@@ -39,3 +50,7 @@ extra:
   social:
     - type: 'github'
       link: 'https://github.com/Devlinked'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/in/juanhenriquezz/'
+#    - type: 'linkedin'
+#      link: 'https://www.linkedin.com/in/samuel-murillo-249547123/'
